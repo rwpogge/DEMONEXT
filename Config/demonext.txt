@@ -1,0 +1,123 @@
+---
+# 
+# DEMONEXT YAML configuration file
+#
+# Updated: 2026 Apr 18 - rwp/osu
+#
+# Notes added under the various entries
+#
+# data, logging, and configuration directories
+#   if not a full qualified path, assumes relative to $HOME
+# added ccd, focuser, and calibration program entries [2025Jan03]
+# added guider entries, updated focuser entries [2025Jan07]
+# updated focuser range [2025Jan25]
+# added observing scripts directory [2025Apr28]
+# added placeholder for SRO site telemetry [2025May05]
+# mods and additions on-site at SRO [2026Mar18]
+#
+
+directories:
+  DataDir: "D:\\Data"
+  LogDir: "D:\\Logs"
+  ScriptDir: "D:\\Scripts"
+  RoofDir: "R:\\"
+  WeatherDir: "W:\\"
+
+# Observatory site information, FITS prototype
+
+site:
+  OBSERVAT: "DEMONEXT"
+  SITENAME: "Sierra Remote Observatories"
+  SITE_LON: -119.41274 # east longitude
+  SITE_LAT: 37.07039
+  SITE_EL: 1405.0 # meters
+  SRO_BLDG: 14
+  SRO_PIER: 6
+
+# Observatory site telemetry
+
+telemetry:
+  RoofFile: "RoofStatusFile.txt"
+  WxFile:   "sroweather.txt"
+ 
+# Instrument information
+
+instrument:
+  TELESCOP: "PlaneWave CDK20 f/6.8"
+  INSTRUME: "FLI PL23042 + CFW3-10"
+  FOCALLEN: 3454.0 # mm
+  APTDIA: 0.508 # m
+  APTAREA: 171854.9 # mm^2 including central obscuration
+  FOCUSER: "PlaneWave Hedrick"
+  FOCUSSSZ: 1.0 # focuser step size in microns
+
+# Raritan PDU
+
+pdu:
+  config: ".demonext/config/raritanPDU.txt"
+
+# Science CCD and filter wheel parameter
+
+ccd:
+  Setpoint: -10 # CCD TEC cooler setpoint temperature in C
+  MaxExpTime: 1800.0 # max exposure time in seconds
+  Binning: [1,1]     # unbinned pixels
+  FWStepTime: 1.2  # seconds to move 1 filter position in seconds
+
+# Guide Telescope and camera configuration
+
+guider:
+  TELESCOP: "SkyWatcher 102mm f/12.7"
+  INSTRUME: "ZWO ASI421mm"
+  FILTER: "Yellow Wratten 12"
+  Aggressiveness: 7  # range 0-10, 0=off, 10=max
+  ExpTimes: [1,2,5,10,20,30,60] # seconds
+  FocZero: 30000 # steps
+  FocStep: 100   # steps
+
+# Hedrick Focuser configuration
+
+focuser:
+  MaxFocus: 36000   # microns - measured for this focuser
+  MaxExpTime: 120.0 # seconds
+  RefFocus: 32150   # microns - arbitrary for testing (estimate from Winer deploy)
+  FocStep: 100      # microns
+  RefFilter: 5      # reference filter for relative focus (sdss r)
+  FilterOffsets: [0,0,0,0,0,0,0,0,0,0]  # focus offset per filter relative to RefFilter
+
+# Science Guider configuration
+
+sciguider:
+  Threshold: 10.0    # detection threshold, sigma above sky
+  MinFWHM: 1.25      # min and max "star" FWHM in pixels
+  MaxFWHM: 4.0
+  MaxEll: 0.3        # maximum image ellipticity (galaxy, CRE rejection)
+  MinPeak: 5000.0    # minimum peak pixel above sky in ADU
+  MaxPeak: 55000.0   # maximum peak pixel including sky in ADU (saturation avoidance)
+  OffsetTol: 5       # catalog matcher offset tolerance in pixels
+  CalXStep: 10       # science guider calibration offset in X (seconds)
+  CalYStep: 10       # science guider calibration offset in Y (seconds)
+  MinStars: 5        # minimum number of stars to compute offsets
+  Gain: 0.8          # guide correction gain factor (dimensionless)
+  CCDRotAng: 90.0    # Nominal CCD-to-sky rotation angle in degrees CW
+  Guide_A: 0.0       # guider calibration N-S scale in units of sec/pixel
+  Guide_B: 0.0       # guider calibration E-W scale in units of sec/pixel
+  Guide_Theta: -90.0 # guider rotation (usually -CCDRotAng)
+
+# Calibration program header entries
+
+calibration:
+  PROJECT: Calibration
+  PI_NAME: Calibration
+  PI_INST: All
+  OBJECT: Calibration
+  
+# Default project information placeholders
+
+project:
+  PROJECT: Engineering
+  PI_NAME: Engineering
+  PI_INST: OSU
+  OBJECT: "Test Data"
+  OBSERVER: "DEMONEXT Observe-o-Bot"
+

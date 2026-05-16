@@ -1,0 +1,31 @@
+project:
+  PROJECT: OSU_Galaxies
+  PI_NAME: R. Pogge
+  PI_INST: OSU
+  PI_EMAIL: pogge.1@osu.edu
+target:
+  Name: NGC1234
+  RA2000: '12:13:14.567'
+  Dec2000: '+22:33:44.12'
+sequence:
+  GuideMode: none
+  NumObs: 3
+  obs1:
+  - g_SDSS
+  - 300
+  - 3
+  obs2:
+  - r_SDSS
+  - 300
+  - 3
+  obs3:
+  - i_SDSS
+  - 360
+  - 3
+constraints:
+  Airmass: 1.5
+  MoonPhase: 0.3
+  MoonAngle: 30.0
+  MaxSky: 25000.0
+  StartTime: '2025-01-29T00:12:13Z'
+  EndTime: '2025-01-29T04:13:14Z'

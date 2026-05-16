@@ -1,0 +1,22 @@
+---
+# 
+# raritanPDU class default configuration file
+#
+# This is for the DEMONEXT PDU in the lab
+#
+# Initial Version: 
+#  2024 Dec 18 - rwp/osu
+#
+# Updates:
+#  2026 Feb 3 - added SRO network assignments [rwp/osu]
+#
+
+pdu:
+  ipAddr: 192.168.65.101
+  userID: telemetry
+  passwd: myPass    # placeholder, replace with actual
+  disableCert: Yes  # disable certificate verification
+  timeout: 10       # RPC timeotu in seconds
+  switchDelay: 1    # switch operation delay in seconds
+  outletNames: ["pc","ccd","telescope","aux"]
+

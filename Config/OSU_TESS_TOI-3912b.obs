@@ -1,0 +1,24 @@
+project:
+  PROJECT: OSU_TESS
+  PI_NAME: Carden
+  PI_INST: OSU
+  PI_EMAIL: carden.33@osu.edu
+
+target:
+  Name: TOI-3912 b
+  RA2000: '14:23:12.4'
+  Dec2000: '+24:04:35.6'
+  Priority: 1
+  GuideMode: science
+
+sequence:
+  NumObs: 1
+  obs1: ["r_SDSS",120.0,140]
+
+constraints:
+  StartTime: '2025-04-29T05:30:00Z'
+  EndTime: '2025-04-29T11:08:00Z'
+
+status:
+  parsed: Y
+  validated: Y

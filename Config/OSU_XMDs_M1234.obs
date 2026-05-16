@@ -1,0 +1,26 @@
+project:
+  PROJECT: OSU_XMDs
+  PI_NAME: Pogge
+  PI_INST: OSU
+  PI_EMAIL: pogge.1@osu.edu
+
+target:
+  Name: M1234
+  RA2000: '22:03:12.3'
+  Dec2000: '+24:20:57'
+  Priority: 1
+  GuideMode: auto
+
+sequence:
+  NumObs: 1
+  obs1: ["g_SDSS",10.0,3]
+  obs2: ["r_SDSS",10.0,3]
+  obs3: ["i_SDSS",10.0,3]
+
+constraints:
+  Airmass: 1.5
+
+status:
+  parsed: Y
+  validated: N
+
