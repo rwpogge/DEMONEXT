@@ -1,6 +1,6 @@
-# DEMONEXT Reboot
+# DEMONEXT 2025
 
-Repository of code and hardware/software configuration files for the 2025 DEMONEXT reboot.
+Repository of code and hardware/software configuration files for the DEMONEXT reboot project begun in 2025.
 
 This repository was split off from the alpha-level development version on https://github.com/kyleecpi/DEMONEXT after deployment
 of the telescope and instrumentation at Sierra Remote Observatories in March 2026, migrating a snapshot of the original alpha
