@@ -1,0 +1,36 @@
+[project]
+name = "demonext"
+version = "1.0.1"
+description = "DEMONEXT robotic telescope operations package"
+authors = [
+    {name = "Richard Pogge",email = "rwpogge@gmail.com"}
+]
+keywords = ["telescope","ccd","cmos","astronomy","sensors","imaging"]
+license = {file="LICENSE"}
+readme = "readme.md"
+requires-python = ">=3.12"
+dependencies = [
+  "logging",
+  "yaml",
+  "astropy",
+  "pathlib",
+  "datetime",
+  "numpy",
+  "win32com",
+  "time",
+  "glob",
+  "math",
+  "sep",
+  "scipy",
+  "raritan",
+  "pytz",
+  "astroplan",
+]
+
+[project.urls]
+Repository="https://github.com/rwpogge/DEMONEXT2025"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
