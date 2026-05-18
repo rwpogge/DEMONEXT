@@ -2,7 +2,7 @@
 # 
 # DEMONEXT YAML configuration file
 #
-# Updated: 2026 Apr 18 - rwp/osu
+# Updated: 2026 May 18 - rwp/osu
 #
 # Notes added under the various entries
 #
@@ -14,6 +14,7 @@
 # added observing scripts directory [2025Apr28]
 # added placeholder for SRO site telemetry [2025May05]
 # mods and additions on-site at SRO [2026Mar18]
+# missing bits added during live testing [2026May18]
 #
 
 directories:
@@ -31,6 +32,7 @@ site:
   SITE_LON: -119.41274 # east longitude
   SITE_LAT: 37.07039
   SITE_EL: 1405.0 # meters
+  SITE_TZ: "US/Pacific"
   SRO_BLDG: 14
   SRO_PIER: 6
 
