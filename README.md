@@ -1,4 +1,4 @@
-# DEMONEXT 2025
+# pyDEMONEXT
 
 Repository of code and hardware/software configuration files for the DEMONEXT reboot project begun in 2025.
 
