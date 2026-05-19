@@ -1,0 +1,26 @@
+Number of Cal Stars:
+ 0 
+
+Latitude, Longitude, TimeZone, DST:
+ 39.9999999999448 
+ 82.999999999886 
+ 5 
+ 0 
+
+CW Azimuth, MaxAzCounts:
+True
+ 6.28318530718 
+
+Altitude Up, MaxAltCounts:
+True
+ 6.28318530718 
+
+IsAltAz, IsGEM:
+False
+False
+
+Temperature, Pressure:
+ 15 
+ 1000 
+Enables:
+ 4095
