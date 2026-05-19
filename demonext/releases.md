@@ -1,6 +1,11 @@
 # DEMONEXT module release notes
 
-**Last Release: 2026 May 17**
+**Last Release: 2026 May 19**
+
+## Version 1.0.2 - 2026 May 19
+Patch, fixed bug in `Camera.cooldown()` method that ignored changing the set point with the 
+optional argument.
+
 
 ## Version 1.0.1 - 2026 May 17
 Field install and test at SRO.
