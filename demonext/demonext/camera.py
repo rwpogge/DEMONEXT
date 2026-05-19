@@ -1403,7 +1403,7 @@ class Camera:
             self.ccd.TemperatureSetpoint = self.setpoint
             logger.info(f"Changed CCD cooler set point: {self.setpoint:.1f}C")
         except Exception as exp:
-            msg = f"Cannot change CCD coolr set point: {exp}"
+            msg = f"Cannot change CCD cooler set point: {exp}"
             logger.exception(msg)
             raise RuntimeError(msg)
 
